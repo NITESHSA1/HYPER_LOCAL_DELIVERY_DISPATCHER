@@ -1,0 +1,46 @@
+### Admin API Endpoints
+### Base URL: http://localhost:5000/api/admin
+
+### Get User Profile
+GET http://localhost:5000/api/admin/profile
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### Update User Profile
+PUT http://localhost:5000/api/admin/profile
+Authorization: Bearer YOUR_TOKEN_HERE
+Content-Type: multipart/form-data
+
+{
+  "fullName": "John Smith Updated",
+  "phone": "+1 (555) 987-6543",
+  "company": "DispatchPro Corp",
+  "bio": "Experienced logistics manager",
+  "location": "Los Angeles, CA"
+}
+
+### Change Password
+PUT http://localhost:5000/api/admin/change-password
+Authorization: Bearer YOUR_TOKEN_HERE
+Content-Type: application/json
+
+{
+  "currentPassword": "password123",
+  "newPassword": "newpassword123"
+}
+
+### Get Dashboard Stats
+GET http://localhost:5000/api/admin/stats
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### Get All Users (Admin Only)
+GET http://localhost:5000/api/admin/users
+Authorization: Bearer YOUR_TOKEN_HERE
+
+### Update User Status
+PUT http://localhost:5000/api/admin/users/USER_ID_HERE/status
+Authorization: Bearer YOUR_TOKEN_HERE
+Content-Type: application/json
+
+{
+  "isActive": false
+}
