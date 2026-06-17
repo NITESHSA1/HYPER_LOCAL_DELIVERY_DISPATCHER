@@ -1,37 +1,27 @@
 {
-  "name": "hyper-local-delivery-dispatcher",
-  "private": true,
+  "name": "hyperlocal-delivery-app",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Hyper-local delivery dispatcher - Fullstack application with Node.js backend and React frontend",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "seed": "cd backend && node seeder.js",
+    "build": "cd frontend && npm run build"
   },
-  "dependencies": {
-    "axios": "^1.17.0",
-    "chart.js": "^4.5.1",
-    "jwt-decode": "^4.0.0",
-    "lucide-react": "^0.469.0",
-    "react": "^19.0.0",
-    "react-chartjs-2": "^5.3.1",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.17.0",
-    "zustand": "^5.0.14"
-  },
+  "keywords": [
+    "delivery",
+    "dispatcher",
+    "hyperlocal",
+    "nodejs",
+    "react",
+    "mongodb",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^6.0.2",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.14.0",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.19",
-    "vite": "^8.0.16"
+    "concurrently": "^8.2.2"
   }
 }
