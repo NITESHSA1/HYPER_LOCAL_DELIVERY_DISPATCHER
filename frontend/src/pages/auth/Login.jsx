@@ -77,30 +77,7 @@ const Login = () => {
           <p className="text-gray-500 mt-2">Sign in to your account</p>
         </div>
 
-        {/* Demo Logins */}
-        <div className="mb-6 p-4 bg-blue-50 rounded-lg">
-          <p className="text-sm font-medium text-blue-900 mb-2">Demo Accounts (Click to auto-fill):</p>
-          <div className="grid grid-cols-3 gap-2">
-            <button
-              onClick={() => quickLogin('admin@hyperlocal.com', 'admin123')}
-              className="text-xs bg-blue-100 hover:bg-blue-200 text-blue-800 py-1.5 px-2 rounded transition-colors"
-            >
-              Admin
-            </button>
-            <button
-              onClick={() => quickLogin('customer@hyperlocal.com', 'customer123')}
-              className="text-xs bg-blue-100 hover:bg-blue-200 text-blue-800 py-1.5 px-2 rounded transition-colors"
-            >
-              Customer
-            </button>
-            <button
-              onClick={() => quickLogin('rider1@hyperlocal.com', 'rider123')}
-              className="text-xs bg-blue-100 hover:bg-blue-200 text-blue-800 py-1.5 px-2 rounded transition-colors"
-            >
-              Rider
-            </button>
-          </div>
-        </div>
+
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
